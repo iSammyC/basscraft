@@ -15,10 +15,10 @@
 @import 'basscss-utility-layout';
 @import 'basscss-utility-typography';
 @import 'basscss-utility-headings';
-@import 'basscss-utility-white-space';
-@import 'basscss-utility-responsive-states';
+@import 'basscss-white-space';
+@import 'basscss-responsive-states';
 @import 'basscss-positions';
-@import 'basscss-ui-utility-button-sizes';
+@import 'basscss-button-sizes';
 
 @import 'basscss-grid';
 @import 'flex-object';
@@ -31,7 +31,7 @@
 @import 'basscss-button-outline';
 @import 'basscss-button-transparent';
 @import 'basscss-background-images';
-@import 'basscss-color-borders';
+@import 'basscss-borders';
 @import 'basscss-colors';
 
 @import 'basscss-defaults';

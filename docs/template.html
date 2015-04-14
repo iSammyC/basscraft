@@ -131,7 +131,7 @@
       <h1 class="sans h4 caps m0"><a href="#tables">Tables</a></h1>
       <hr class="mt1">
       <div class="overflow-auto">
-        <table class="table-light">
+        <table id="table" class="table-light border-fuchsia">
           <thead>
             <tr> <th>Meat</th> <th>Sauce</th> </tr>
           </thead>
@@ -149,22 +149,22 @@
       <h1 class="sans h4 caps m0"><a href="#colors">Colors</a></h1>
       <hr class="mt1">
       <div class="h6 caps flex flex-wrap white">
-        <div class="col-3 bg-aqua p3">aqua</div>
-        <div class="col-3 bg-blue p3">blue</div>
-        <div class="col-3 bg-lime p3">lime</div>
-        <div class="col-3 bg-navy p3">navy</div>
-        <div class="col-3 bg-teal p3">teal</div>
-        <div class="col-3 bg-olive p3">olive</div>
-        <div class="col-3 bg-green p3">green</div>
-        <div class="col-3 bg-red p3">red</div>
-        <div class="col-3 bg-maroon p3">maroon</div>
-        <div class="col-3 bg-orange p3">orange</div>
-        <div class="col-3 bg-purple p3">purple</div>
-        <div class="col-3 bg-yellow p3">yellow</div>
-        <div class="col-3 bg-fuchsia p3">fuchsia</div>
-        <div class="col-3 bg-gray p3">gray</div>
-        <div class="col-3 bg-black p3">black</div>
-        <div class="col-3 bg-silver p3">silver</div>
+        <div class="col-6 sm-col-3 px1 py3 bg-aqua">aqua</div>
+        <div class="col-6 sm-col-3 px1 py3 bg-blue">blue</div>
+        <div class="col-6 sm-col-3 px1 py3 bg-lime">lime</div>
+        <div class="col-6 sm-col-3 px1 py3 bg-navy">navy</div>
+        <div class="col-6 sm-col-3 px1 py3 bg-teal">teal</div>
+        <div class="col-6 sm-col-3 px1 py3 bg-olive">olive</div>
+        <div class="col-6 sm-col-3 px1 py3 bg-green">green</div>
+        <div class="col-6 sm-col-3 px1 py3 bg-red">red</div>
+        <div class="col-6 sm-col-3 px1 py3 bg-maroon">maroon</div>
+        <div class="col-6 sm-col-3 px1 py3 bg-orange">orange</div>
+        <div class="col-6 sm-col-3 px1 py3 bg-purple">purple</div>
+        <div class="col-6 sm-col-3 px1 py3 bg-yellow">yellow</div>
+        <div class="col-6 sm-col-3 px1 py3 bg-fuchsia">fuchsia</div>
+        <div class="col-6 sm-col-3 px1 py3 bg-gray">gray</div>
+        <div class="col-6 sm-col-3 px1 py3 bg-black">black</div>
+        <div class="col-6 sm-col-3 px1 py3 bg-silver">silver</div>
       </div>
     </section>
 
@@ -207,10 +207,13 @@
 
   <script>
     var body = document.body;
+    var table = document.querySelector('#table');
     var select = document.querySelector('#color-select');
     function changeColor(color) {
       body.className = '';
       body.classList.add(color);
+      table.className = '';
+      table.classList.add('table-light', 'border-'+color);
       if (dark(color)) {
         body.classList.add('bg-navy');
       } else {
